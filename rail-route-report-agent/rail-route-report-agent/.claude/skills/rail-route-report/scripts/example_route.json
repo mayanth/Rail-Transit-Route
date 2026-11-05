@@ -1,0 +1,29 @@
+{
+  "title": "ระบบค้นหาเส้นทางเดินทางด้วยรถไฟฟ้า (ตัวอย่าง Template)",
+  "origin": "พระราม 9 (Phra Ram 9)",
+  "destination": "สยาม (Siam)",
+  "checked_at": "YYYY-MM-DD HH:MM",
+  "summary": "ตัวอย่างโครงสร้างเท่านั้น — ตัวเลข XX ต้องแทนด้วยข้อมูลที่ค้นและยืนยันจากแหล่งทางการ ณ วันที่ตรวจ",
+  "routes": [
+    {
+      "label": "เร็วที่สุด", "recommended": true,
+      "path": "พระราม 9 → สุขุมวิท ⇄ อโศก → สยาม",
+      "transfers": 1, "stations": "XX", "fare": "XX บาท", "fare_status": "unverifiable", "time": "~XX นาที",
+      "legs": [
+        {"line": "MRT สายสีน้ำเงิน", "direction": "[สถานีปลายสาย]", "board": "พระราม 9", "alight": "สุขุมวิท", "stations": "XX", "transfer_note": "ข้ามระบบ: แตะบัตรออก MRT → เดินเชื่อมไป BTS อโศก"},
+        {"line": "BTS สายสุขุมวิท", "direction": "คูคต", "board": "อโศก", "alight": "สยาม", "stations": "XX", "transfer_note": "-"}
+      ],
+      "card_note": "ค่าโดยสารเที่ยวเดียวผู้ใหญ่ คิดแยก MRT + BTS; ตรวจส่วนลดตามประเภทบัตร"
+    },
+    {
+      "label": "ทางเลือก", "recommended": false,
+      "path": "[ทางเลือกอื่น ถ้ามี]", "transfers": "-", "stations": "-", "fare": "-", "fare_status": "not_found", "time": "-",
+      "legs": [], "card_note": "-"
+    }
+  ],
+  "notes": ["ทดสอบภาษาไทยผสม English: ผู้ใหญ่ / Adult · ผู้สูงอายุ / Senior · นักเรียน / Student"],
+  "sources": [
+    {"name": "BTS — ค่าโดยสาร", "url": "https://www.bts.co.th", "checked_at": "YYYY-MM-DD HH:MM", "level": 1},
+    {"name": "MRT (BEM) — ค่าโดยสาร", "url": "https://metro.bemplc.co.th", "checked_at": "YYYY-MM-DD HH:MM", "level": 1}
+  ]
+}
